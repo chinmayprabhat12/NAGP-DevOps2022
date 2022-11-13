@@ -31,13 +31,13 @@ pipeline{
                 }
             }
         }
-/*        stage("Publish to Artifactory"){
+        stage("Publish to Artifactory"){
             steps{
                 rtMavenDeployer(
                     id: 'deployer',
-                    serverId: 'Ravish_Artifactory',
-                    releaseRepo: 'Ravish_Artifactory',
-                    snapshotRepo: 'Ravish_Artifactory'
+                    serverId: 'NAGPJFROG',
+                    releaseRepo: 'NAGPJFROG',
+                    snapshotRepo: 'NAGPJFROG'
                 )
                 rtMavenRun(
                     pom: 'pom.xml',
@@ -45,7 +45,7 @@ pipeline{
                     deployerId: 'deployer'
                     )
                 rtPublishBuildInfo(
-                    serverId:'Ravish_Artifactory',
+                    serverId:'NAGPJFROG',
                 )
             }        
         }
@@ -53,7 +53,7 @@ pipeline{
 			steps{
 				build job: 'Dev-Ops-Freestyle-Practice'
 			}
-		}   */
+		}   
     }
     post{
         success{
