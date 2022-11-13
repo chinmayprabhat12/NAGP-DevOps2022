@@ -49,12 +49,7 @@ pipeline{
                 )
             }        
         }
-        stage("Invoke UI Test Pipeline"){
-			steps{
-				build job: 'NAGP DevOps Project Pipeline'
-			}
-		}   
-    }
+      }
     post{
         success{
             bat "echo success"
